@@ -3,13 +3,18 @@
 	src: url('../fonts/wisdom-script.otf') format('opentype');
 }
 
+html {
+  font-size: 16px; /* sets base font size for entire page at 16px */
+}
+
 body {
 	font-family: 'Montserrat', Helvetica, Arial, sans-serif;
+	font-size: 1em;
 }
 
 .container{
-	max-width: 1200px;
-	margin: 0 auto;
+	max-width: 75em;
+	margin: 0 5%; /* originally 0 auto */
 }
 
 h1,
@@ -20,75 +25,71 @@ h4 {
 	text-transform: uppercase;
 	font-weight: 700;
 }
-h1 {
-	font-size: 30px;
-}
+
 h2 {
-    font-size: 24px;
-}
-h3 {
-	font-size: 18px;
-}
-h4 {
-	font-size: 12px;
+    font-size: 24px; /* unused header tag? */
 }
 
-p {
-	font-size: 14px;
-	line-height: 21px;
-    padding: 0 30px;
-}
-
-/*The widths are in a percentage!*/
+/***** HEADER *****/
 header {
-	height: 110px;
-	border-bottom: 3px solid #77a466;
+	border-bottom: 0.214em solid #77a466; /* 3px over 14 */
+	font-size: .875em; /* set based on li at 14px */
+	height: auto;
 	margin: 0 auto;
 }
 
 header h1 {
-	float: left;
+	color: black;
+	text-align: center;
+	font-weight: 700;
+	font-size: 2.143em; /* 30px */
 	margin: 0;
-	padding: 38px 0;
+	padding: 1.267em 0 .634em 0; /* 38px 0 over 30 */
+	text-transform: uppercase;
 }
+
 header h1 span {
 	color: #77a466;
 }
 
 header nav {
-	float: right;
-	padding: 46px 0;
+	border-top: 0.214em solid #77a466; /* added 3px border to top of mobile navigation */
+	text-align: center;
 }
+
 header nav ul {
+	list-style: none; /* removes list bullets */
 	margin: 0;
-	padding: 0;
+	padding: .7143em 0; /* needed additional padding above/below */
 }
+
 header nav ul li {
 	text-transform: uppercase;
 	font-weight: 700;
-	font-size: 14px;
-	padding: 0 10px;
-	display: inline;
-}
-header nav ul li a{
-	text-decoration: none;
-	color:#77a466;
+	font-size: 1em; /* 14px */
+	padding: .7143em 0; /* needed padding above/below instead of left/right */
 }
 
-/*The widths are in a percentage!*/
-.top-section,
-.bottom-section {
+header nav ul li a{
+	text-decoration: none;
+	color: #77a466;
+}
+
+/***** TOP SECTION *****/
+.top-section {
 	margin: 0 auto;
 	clear: both;
+	font-size: 1em; /* set based on p at 16px */
 }
 
 .main-image {
 	height: auto;
 	float: left;
 }
+
 .main-image img {
 	width: 100%;
-	border-bottom: 3px solid #77a466;
+	border-bottom: 0.1875em solid #77a466; /* 3px */
 }
 
 .main-title {
@@ -97,69 +98,132 @@ header nav ul li a{
 }
 .main-title h3 {
 	text-align: left;
-	padding: 5px 0;
+	padding: 0.278em 0; /* 5px 0 over 18 */
 	color: #77a466;
+	font-size: 1.125em; /* 18px */
 }
+
 .main-title p {
+	font-size: 1em; /* 16px */
+	line-height: 1.563em; /* 25px over 16 */
 	padding: 0;
-	font-size: 16px;
-	line-height: 25px;
+}
+
+/***** BOTTOM SECTION *****/
+.bottom-section {
+	margin: 0 auto;
+	clear: both;
+	font-size: 1em; /* set based on p at 16px */
 }
 
 .section-one,
 .section-two,
 .section-three {
-	width: 33%;
 	height: auto;
-	float: left;
-	border-top: 1px solid #eee;
+	border-top: 0.0625em solid #eee; /* 1px */
 }
 
-.section-one h4 {
-	padding: 10px 0;
-}
-
-.section-two {
-	border-left: 1px solid #eee;
-	border-right: 1px solid #eee;
-}
-
+.section-one h4,
 .section-two h4,
 .section-three h4 {
-	padding: 10px 30px;
+	font-size: .75em; /* 12px */
+	padding: .83em 0; /* 10px 0 over 12px */
 }
 
 .menu {
 	list-style: none;
 	padding: 0;
 }
+
 .menu li {
-	padding: 10px 0;
-	color:#77a466;
+	color: #77a466;
+	padding: .625em 0; /* 10px 0 */
 }
 
 .reviews {
 	color: #333;
-	font-size: 16px;
-	line-height: 21px;
+	line-height: 1.313em; /* 21px */
 }
 
 .address {
-	font-size: 16px;
-	line-height: 24px;
+	line-height: 1.5em; /* 24px */
 }
 
-/*The widths are in a percentage!*/
+/***** FOOTER *****/
 footer {
-	height: 50px;
-	border-top: 3px solid #eee;
-	margin: 0 auto;
 	clear: both;
+	border-top: .25em solid #eee; /* 3px */
+	font-size: .75em; /* set based on footer h4 at 12px */
+	height: 4.167em; /* 50px over 12 */
+	margin: 0 auto;
 	text-align: center;
 }
+
+footer h4 {
+	font-size: 1em; /* 12px over 12 */
+}
+
 footer span {
-	font-family: 'Wisdom Script', cursive;
-	text-transform: lowercase;
 	color: #77a466;
-	font-size: 14px;
+	font-family: 'Wisdom Script', cursive;
+	font-size: 1.167em; /* 14px over 12 */
+	text-transform: lowercase;
+}
+
+
+/***** BREAKPOINTS *****/
+
+/** TABLET **/
+@media all and (min-width: 768px) {
+
+	.section-one,
+	.section-two,
+	.section-three {
+		width: 33%;
+		height: auto;
+		float: left;
+		border-top: 0.0625em solid #eee; /* 1px */
+	}
+
+	.section-two {
+		border-left: 0.0625em solid #eee; /* 1px */
+		border-right: 0.0625em solid #eee; /* 1px */
+	}
+
+	.section-two h4,
+	.section-three h4 {
+		padding: .83em 2.5em; /* 10px 30px where base for this class is 12px */
+	}
+
+	.bottom-section p {
+	    padding: 0 1.875em; /* 0 30px */
+	}
+
+}
+/** DESKTOP **/
+@media all and (min-width: 940px) {
+
+	header {
+		height: 7.857em; /* 110px */
+	}
+
+	header h1 {
+		float: left;
+	}
+
+	header nav {
+		border: 0; /* removes top border from navigation */
+		float: right;
+		padding: 3.2857em 0; /* 46px 0 */
+	}
+
+	header nav ul {
+	padding: 0;
+	}
+
+	header nav ul li {
+		display: inline;
+		padding: 0 .7143em; /* 0 10px where base is 14px */
+	}
+
 }
